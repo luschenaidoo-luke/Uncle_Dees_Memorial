@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #faf9f6;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  padding: 2rem 1rem;
+  background-color: #f5e6e8;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.hero {
+  margin: 2rem auto;
+}
+
+.main-photo {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.carousel {
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.carousel_items {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+}
+
+.carousel_item {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: auto;            /* adjust width as needed */
+  max-width: 800px;
+  transform: translate(-50%, -50%);
+  object-fit:scale-down;
+  object-position: center;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+/* Active image */
+.carousel_item.active {
+  opacity: 1;
+}
+
+/* Slide-out animation to left */
+.carousel_item.slide-out-left {
+  animation: slideOutLeft 1s forwards;
+}
+
+/* Slide-in animation from right */
+.carousel_item.slide-in-right {
+  animation: slideInRight 1s forwards;
+}
+
+/* Keyframes */
+@keyframes slideOutLeft {
+  0% { opacity: 1; transform: translate(-50%, -50%) translateX(0); }
+  100% { opacity: 0; transform: translate(-150%, -50%); }
+}
+
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translate(50%, -50%); }
+  100% { opacity: 1; transform: translate(-50%, -50%); }
+}
