@@ -98,7 +98,7 @@ h1 {
   }
 
   .carousel_item{
-    width: 75%;            /* adjust width as needed */
-    height: 75%;
+    width: 100%;            /* adjust width as needed */
+    height: 100%;
   }
 }
